@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
-    let email = localStorage.getItem("email");
+    let emailId = localStorage.getItem("email");
+    const [email] = useState(emailId)
+    console.log('test');
     return (
         <nav>
             {email ?

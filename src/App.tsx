@@ -6,6 +6,7 @@ import Logout from './components/logout';
 import { NavBar } from './components/navBar';
 
 function App() {
+  
   return (
     <BrowserRouter>
       <NavBar />

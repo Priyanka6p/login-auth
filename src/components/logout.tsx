@@ -1,17 +1,21 @@
-import React, { useEffect } from 'react'
-import { useNavigate, NavigateFunction } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Logout = () => {
-    let navigate: NavigateFunction = useNavigate();
+const Logout:React.FC = () => {
+  const navigate = useNavigate();
 
-    useEffect(()=>{
-        localStorage.removeItem("email");
-        return navigate('/');
-    }, [3000]);
+  useEffect(() => {
+    localStorage.removeItem("email");
+    navigate('/login');
+  }, [navigate]);
 
   return (
-    <div>You are logging out...</div>
-  )
+    <div>
+      <center>
+        <h3>You are logging out...</h3>
+      </center>
+    </div>
+  );
 }
 
 export default Logout;
